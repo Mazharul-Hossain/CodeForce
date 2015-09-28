@@ -141,9 +141,11 @@ void BuildHeap(struct Vertex minHeap[], int size)
 
 int main()
 {
+    freopen("in.txt", "r", stdin);
+
     int n, i;
 
-    printf("Enter the Initial size of the Min Heap -\n");
+    // printf("Enter the Initial size of the Min Heap -\n");
 
     scanf("%d", &n);
 
@@ -151,11 +153,11 @@ int main()
     // Extra size just to demonstrate Insertion
     // and use the array as 1-indexed
 
-    printf("Enter %d elements -\n", n);
+    // printf("Enter %d elements -\n", n);
 
     for (i = 1; i <= n; ++i)
     {
-        scanf("%d%d", &minHeap[i].label, &minHeap[i].value);
+        scanf("%d %d", &minHeap[i].label, &minHeap[i].value);
     }
 
     BuildHeap(minHeap, n);
@@ -165,7 +167,7 @@ int main()
     {
         printf("%d, %d\n", minHeap[i].label, minHeap[i].value);
     }
-
+/*
     struct Vertex node;
 
     printf("\n\nInsert an element -\n");
@@ -187,6 +189,6 @@ int main()
     {
         printf("%d, %d\n", minHeap[i].label, minHeap[i].value);
     }
-
+*/
     return 0;
 }
